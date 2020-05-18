@@ -878,7 +878,7 @@ footer.footer { background: #323232; padding: 15px 0 0; color: #FFF; }
 
 .card-advantages ul li { position: relative; padding-left: 12px; margin-bottom: 10px; }
 
-.card-advantages ul li:before { content: ""; position: absolute; left: 0; top: 0.52rem; width: 8px; height: 1px; background: #AAA; }
+.card-advantages ul li:before { content: ""; position: absolute; left: 0; top: 0.57rem; width: 8px; height: 1px; background: #AAA; }
 
 .card-total { padding: 30px 40px 20px; border: 1px solid #eee; margin-top: -1px; }
 
