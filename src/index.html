@@ -1,0 +1,647 @@
+<!--#include file="inc-header.html"-->
+
+<div class="row row-front">
+  <aside class="col-md-3 desktop-only">
+    <div class="filters">
+      <div class="filters-group">
+        <div class="filters-title">Каталог</div>
+        <ul class="filters-menu">
+          <li><a href="#" class="active">Все категори</a></li>
+          <li><a href="#">Обычные пылесосы</a></li>
+          <li><a href="#">Роботы-пылесосы</a></li>
+          <li><a href="#">Роботы-плоттеры</a></li>
+          <li><a href="#">Мойщики окон</a></li>
+          <li><a href="#">Роботы для бассейнов</a></li>
+        </ul>
+      </div>
+
+      <div class="filters-group">
+        <div class="filters-title">Бренд</div>
+        <ul class="filters-menu">
+          <li><a href="#">Xiaomi</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">iPlus</a></li>
+          <li><a href="#">Cleverpanda</a></li>
+        </ul>
+        <span class="filters-loader" data-href="ajax/all-brands.html" data-loaded="false">Все 64 варианта</span>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Фильтр</div>
+        <ul class="filters-menu">
+          <li><a href="#" class="active">с влажной уборкой</a></li>
+          <li><a href="#">для ковров</a></li>
+          <li><a href="#">для уборки шерсти</a></li>
+          <li><a href="#">с приложением</a></li>
+        </ul>
+        <span class="filters-loader" data-href="ajax/all-filters.html" data-loaded="false">Все 20 варианта</span>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Цена</div>
+
+        <div class="ui-range-inputs flex">
+          <input type="text" name="range_price_min" id="range_price_min" value="190" placeholder="От">
+          <input type="text" name="range_price_max" id="range_price_max" value="2300" placeholder="До">
+        </div>
+        <div class="ui-range-wrap">
+          <input type="text" class="ui-range" id="range-prices" data-min="0" data-max="3000">
+        </div>
+        
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Емкость аккумулятора, мАч</div>
+
+        <div class="ui-range-inputs flex">
+          <input type="text" name="range_v_min" id="range_v_min" value="" placeholder="От">
+          <input type="text" name="range_v_max" id="range_v_max" value="" placeholder="До">
+        </div>
+        <div class="ui-range-wrap">
+          <input type="text" class="ui-range" id="range-v" data-min="0" data-max="6000">
+        </div>
+        
+      </div><!--.group-->
+    </div><!--.filters-->
+  </aside>
+
+
+  <main class="col-md-9">
+    <div class="slick-main">
+      <div class="slick-main-slide">
+        <div class="main-slide">
+          <img src="images/examples/slide-main-1.jpg" alt="alt" loading="lazy" class="bg main-slide-img">
+          <div class="main-slide-descr">
+            <div class="main-slide-txt">Все в одном месте для вашего удобства</div>
+            <div class="main-slide-title">Роботы-пылесосы</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slick-main-slide">
+        <div class="main-slide">
+          <a href="#"><img src="https://via.placeholder.com//880x240" alt="alt" class="main-slide-img bg"></a>
+        </div>
+      </div>
+
+      <div class="slick-main-slide">
+        <div class="main-slide">
+          <a href="#"><img src="https://via.placeholder.com//880x240/222/FFF" alt="alt" class="main-slide-img bg"></a>
+        </div>
+      </div>
+    </div><!--.slick-main-->
+
+    <div class="main-top">
+      <h1>Роботы-пылесосы</h1>
+
+      <div class="main-top-txt">
+        <p>Сейчас мы ведем напряженную жизнь и обращаем внимание на технологии, которые помогут сэкономить время и выполнять работу, которую мы бы предпочли не делать. Робот пылесосы недавно стали простым способом поддержания чистоты в доме. На ProductReview.com.au у нас есть 527 обзоров, охватывающих 37 различных моделей роботов-пылесосов. Из этих обзоров мы узнали много нового о том, что вызывает удовлетворение этими пылесосами. Из этих обзоров мы узнали много нового о том, что вызывает удовлетворение этими пылесосами.</p>
+
+        <p>Наша цель с этим руководством по покупке состоит в том, чтобы помочь вам «лучше знать, выбрать лучше», когда вы покупаете робот-пылесос. Используя эти 527 отзывов потребителей, мы поможем вам понять, какие вопросы задавать, какие функции искать и каковы лучшие пылесосы роботов.</p>
+      </div>
+    </div>
+
+    <div class="catalog-sorting">
+      <span class="catalog-sorting-label">Сортировать по:</span>
+      <a href="javascript:void(0)" class="catalog-sorting-link active">Популярности</a>
+      <a href="javascript:void(0)" class="catalog-sorting-link">Цене</a>
+      <a href="javascript:void(0)" class="catalog-sorting-link">Рейтингу</a>
+      <div class="catalog-sorting-mobile">
+        <select name="" id="">
+          <option value="1">Популярности</option>
+          <option value="2">Рейтингу</option>
+          <option value="3">Цене</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="catalog-list">
+      <div class="card-item">
+        <div class="card-cols flex">
+          <div class="card-img">
+            <picture>
+              <source srcset="images/examples/goods-1-desktop.png" media="(min-width: 768px)">
+              <img src="images/examples/goods-1-mobile.jpg" alt="alt" loading="lazy">
+            </picture>
+          </div>
+          <div class="card-info">
+            <div class="card-stickers">
+              <span class="sticker green">Новинка</span>
+              <span class="sticker"><i class="sticker-winner"></i>1 место</span>
+            </div>
+  
+            <div class="card-title"><h1>Xiaomi Mi Robot Vacuum (1st gen)</h1><div class="rate"><span class="rate-current">8</span><span class="rate-of">/10</span></div></div>
+  
+            <div class="card-item-line">
+              <span class="card-item-price">от 900 руб.</span>
+              <label for="" class="label-styler card-item-compare">
+                <input type="checkbox" name="">
+                <span>В сравнение</span>
+              </label>
+            </div>
+
+            <div class="card-item-characters flex flex-wrap">
+              <div class="ui-character flex">
+                <div class="ui-character-label">Габаритные рамеры</div>
+                <div class="ui-character-value">52</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Вес</div>
+                <div class="ui-character-value">2 кг</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Мощность васывания</div>
+                <div class="ui-character-value">755 бар</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">База с мусоросборником</div>
+                <div class="ui-character-value">есть</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Уровень шума</div>
+                <div class="ui-character-value">30 Дб</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Влажная уборка</div>
+                <div class="ui-character-value">нет</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Автовозврат на базу</div>
+                <div class="ui-character-value">есть</div>
+              </div>
+            </div>
+          </div><!--.card-info-->
+  
+          <div class="card-purposes">
+            <div class="card-purposes-item">
+              <div class="card-price">900 руб.</div>
+              <div class="card-market">botmania.by</div>
+              <a href="#" class="btn btn-mini">Купить</a>
+            </div>
+            <div class="card-purposes-item">
+              <div class="card-price">975 руб.</div>
+              <div class="card-market">21vek.by</div>
+              <a href="#" class="btn btn-mini">Купить</a>
+            </div>
+            <div class="card-purposes-toggler">
+              <span class="desktop">Еще предложения</span>
+              <span class="mobile">Купить за 900 руб. на bootmania.by</span>
+            </div>
+            <div class="card-purposes-drop">
+              <div class="card-purposes-item only-mobile">
+                <div class="card-price">900 руб.</div>
+                <div class="card-market">botmania.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item only-mobile">
+                <div class="card-price">975 руб.</div>
+                <div class="card-market">21vek.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item">
+                <div class="card-price">909 руб.</div>
+                <div class="card-market">emogilev.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item">
+                <div class="card-price">971 руб.</div>
+                <div class="card-market">777555.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+            </div>
+          </div><!--.card-store-->
+        </div><!--.card-cols-->
+  
+        <div class="card-keys">
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Качество сборки</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:100%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">10</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Цена</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:90%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">9</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Простота использования</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:20%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">2</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Очистка и обслуживание</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:40%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">4</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Уровень шума</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:80%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">8</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Качество уборки</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:100%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">10</span>/10</div>
+              </div>
+            </div>
+          </div>
+        </div><!--.card-keys-->
+        
+      </div><!--.catalog-item-->
+
+      <div class="card-item">
+        <div class="card-cols flex">
+          <div class="card-img">
+            <picture>
+              <source srcset="images/examples/goods-5-desktop.jpg" media="(min-width: 768px)">
+              <img src="images/examples/goods-5-mobile.jpg" alt="alt" loading="lazy">
+            </picture>
+          </div>
+          <div class="card-info">
+            <div class="card-stickers">
+              <span class="sticker green">Новинка</span>
+              <span class="sticker">2 место</span>
+            </div>
+  
+            <div class="card-title"><h1>Xiaomi Mi Roborock S80</h1><div class="rate orange"><span class="rate-current">6</span><span class="rate-of">/10</span></div></div>
+  
+            <div class="card-item-line">
+              <span class="card-item-price">от 570 руб.</span>
+              <label for="" class="label-styler card-item-compare">
+                <input type="checkbox" name="">
+                <span>В сравнение</span>
+              </label>
+            </div>
+
+            <div class="card-item-characters flex flex-wrap">
+              <div class="ui-character flex">
+                <div class="ui-character-label">Габаритные рамеры</div>
+                <div class="ui-character-value">52 x 50 x 10 cm</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Вес</div>
+                <div class="ui-character-value">2.5 кг</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Мощность васывания</div>
+                <div class="ui-character-value">755 бар</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Уровень шума</div>
+                <div class="ui-character-value">28 Дб</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Влажная уборка</div>
+                <div class="ui-character-value">есть</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Автовозврат на базу</div>
+                <div class="ui-character-value">есть</div>
+              </div>
+            </div>
+          </div><!--.card-info-->
+  
+          <div class="card-purposes">
+            <div class="card-purposes-item">
+              <div class="card-price">570 руб.</div>
+              <div class="card-market">botmania.by</div>
+              <a href="#" class="btn btn-mini">Купить</a>
+            </div>
+            <div class="card-purposes-item">
+              <div class="card-price">605 руб.</div>
+              <div class="card-market">21vek.by</div>
+              <a href="#" class="btn btn-mini">Купить</a>
+            </div>
+            <div class="card-purposes-toggler">
+              <span class="desktop">Еще предложения</span>
+              <span class="mobile">Купить за 570 руб. на bootmania.by</span>
+            </div>
+            <div class="card-purposes-drop">
+              <div class="card-purposes-item mobile-only">
+                <div class="card-price">570 руб.</div>
+                <div class="card-market">botmania.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item mobile-only">
+                <div class="card-price">605 руб.</div>
+                <div class="card-market">21vek.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item">
+                <div class="card-price">909 руб.</div>
+                <div class="card-market">emogilev.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item">
+                <div class="card-price">971 руб.</div>
+                <div class="card-market">777555.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+            </div>
+          </div><!--.card-store-->
+        </div><!--.card-cols-->
+  
+        <div class="card-keys">
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Качество сборки</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:100%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">10</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Цена</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:90%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">9</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Простота использования</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:20%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">2</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Очистка и обслуживание</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:40%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">4</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Уровень шума</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:80%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">8</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Качество уборки</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:100%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">10</span>/10</div>
+              </div>
+            </div>
+          </div>
+        </div><!--.card-keys-->
+      </div><!--.catalog-item-->
+
+      <div class="card-item">
+        <div class="card-cols flex">
+          <div class="card-img">
+            <picture>
+              <source srcset="images/examples/goods-5-desktop.jpg" media="(min-width: 768px)">
+              <img src="images/examples/goods-5-mobile.jpg" alt="alt" loading="lazy">
+            </picture>
+          </div>
+          <div class="card-info">
+            <div class="card-stickers">
+              <span class="sticker green">Новинка</span>
+            </div>
+  
+            <div class="card-title"><h1>Xiaomi Mi Robot Vacum (2st gen)</h1><div class="rate red"><span class="rate-current">3.5</span><span class="rate-of">/10</span></div></div>
+  
+            <div class="card-item-line">
+              <span class="card-item-price">от 900 руб.</span>
+              <label for="" class="label-styler card-item-compare">
+                <input type="checkbox" name="">
+                <span>В сравнение</span>
+              </label>
+            </div>
+
+            <div class="card-item-characters flex flex-wrap">
+              <div class="ui-character flex">
+                <div class="ui-character-label">Габаритные рамеры</div>
+                <div class="ui-character-value">52</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Вес</div>
+                <div class="ui-character-value">2 кг</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Мощность васывания</div>
+                <div class="ui-character-value">755 бар</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">База с мусоросборником</div>
+                <div class="ui-character-value">есть</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Уровень шума</div>
+                <div class="ui-character-value">30 Дб</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Влажная уборка</div>
+                <div class="ui-character-value">нет</div>
+              </div>
+              <div class="ui-character flex">
+                <div class="ui-character-label">Автовозврат на базу</div>
+                <div class="ui-character-value">есть</div>
+              </div>
+            </div>
+          </div><!--.card-info-->
+  
+          <div class="card-purposes">
+            <div class="card-purposes-item">
+              <div class="card-price">900 руб.</div>
+              <div class="card-market">botmania.by</div>
+              <a href="#" class="btn btn-mini">Купить</a>
+            </div>
+            <div class="card-purposes-item">
+              <div class="card-price">975 руб.</div>
+              <div class="card-market">21vek.by</div>
+              <a href="#" class="btn btn-mini">Купить</a>
+            </div>
+            <div class="card-purposes-toggler">
+              <span class="desktop">Еще предложения</span>
+              <span class="mobile">Купить за 900 руб. на bootmania.by</span>
+            </div>
+            <div class="card-purposes-drop">
+              <div class="card-purposes-item mobile-only">
+                <div class="card-price">900 руб.</div>
+                <div class="card-market">botmania.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item mobile-only">
+                <div class="card-price">975 руб.</div>
+                <div class="card-market">21vek.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+              <div class="card-purposes-item">
+                <div class="card-price">909 руб.</div>
+                <div class="card-market">emogilev.by</div>
+                <a href="#" class="btn btn-mini">Купить</a>
+              </div>
+            </div>
+          </div><!--.card-store-->
+        </div><!--.card-cols-->
+  
+        <div class="card-keys">
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Качество сборки</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:100%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">10</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Цена</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:90%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">9</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Простота использования</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:20%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">2</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Очистка и обслуживание</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:40%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">4</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Уровень шума</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:80%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">8</span>/10</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card-key-col">
+            <div class="card-key flex">
+              <div class="card-key-label">Качество уборки</div>
+              <div class="card-key-value flex">
+                <div class="card-key-slider"><div class="card-key-slider-filled" style="width:100%"></div></div>
+                <div class="card-key-evals"><span class="card-key-evals-current">10</span>/10</div>
+              </div>
+            </div>
+          </div>
+        </div><!--.card-keys-->
+        
+      </div><!--.catalog-item-->
+
+    </div><!--.catalog-list-->
+
+    <div class="pgn">
+      <span class="pgn-current">1</span>
+      <a href="#" class="pgn-link">2</a>
+      <a href="#" class="pgn-link">3</a>
+      <a href="#" class="pgn-btn">Вперед</a>
+    </div>
+
+    <div class="main-seo seo">
+      <h2 id="id-1">Зачем мне покупать робот-пылесос?</h2>
+    
+      <p><strong>Причиной № 1</strong>, почему мы видели австралийцев, покупающих роботы-пылесосы, было удобство. Упрощение ежедневной уборки и поддержание пылесосом жилой площади помогло облегчить жизнь.</p>
+
+      <p>Это удобство было показано в обзорах, особенно с владельцами домашних животных, которые упомянули, что они сэкономили значительное количество времени. То, что было почти ежедневной рутинной работой, ушло, и после напряженного дня было что делать.</p>
+
+      <img src="images/examples/article-full-1.jpg" alt="alt" loading="lazy">
+
+      <p>Хорошее эмпирическое правило заключается в том, что если вы живете в доме, который хорошо подходит для робота-пылесоса, это может сэкономить вам 80% времени, которое вы бы провели в пылесосе. Хорошо подумать, сколько стоит ваше время и имеет ли смысл приобретать робот-пылесос.</p>
+
+      <h6>Рассмотрим робот-пылесос, если вы:</h6>
+
+      <ul class="ui-marked">
+        <li>Пылесосить широко открытые помещения, которые имеют много площади.</li>
+        <li>Помещения с интенсивным движением и накапливающие грязь, пыль или крошки.</li>
+        <li>Ковры, которые вы хотите часто чистить из-за движения или домашних животных.</li>
+        <li>Уборка во время вашего отсутствия на работе или вне дома.</li>
+      </ul>
+
+      <h2>Может ли робот пылесос заменить мой обычный пылесос?</h2>
+
+      <div class="ui-highlight sadness">К сожалению, вы не сможете выбросить существующий пылесос после покупки робота-пылесоса. Робот пылесосы удобны, но некоторые задачи лучше оставить традиционному пылесосу.</div>
+
+      <ul class="ui-marked">
+        <li>Пылесосить широко открытые помещения, которые имеют много площади.</li>
+        <li>Помещения с интенсивным движением и накапливающие грязь, пыль или крошки.</li>
+        <li>Ковры, которые вы хотите часто чистить из-за движения или домашних животных.</li>
+        <li>Уборка во время вашего отсутствия на работе или вне дома.</li>
+      </ul>
+
+      <h2>Какие особенности я должен искать в роботе пылесос?</h2>
+
+      <p>Оценивая новый робот-пылесос, вы должны рассмотреть множество функций, чтобы определить, какой из них вам подходит. Ваши потребности определят, какие функции наиболее важны. Мы также помогли, пройдя 527 обзоров 37 роботов-пылесосов на ProductReview.com.au, определить шесть ключевых функций, которые нужно оценить.</p>
+
+      <h6><span class="ui-number">#1</span>Картирование Вашего Дома Для Вашего Пылесоса Робота</h6>
+
+      <p>Лучший способ получить максимальную отдачу от вашего робота-пылесоса - убедиться, что он правильно отображает ваш дом. Технология в этих пылесосах прошла долгий путь от программного обеспечения в вакууме до приложений на вашем телефоне, которые управляют им. Важно, чтобы вы понимали, как ваш пылесос отобразит ваш дом так, чтобы он мог пылесосить как можно большую площадь. Клиенты, которые получили это сразу, действительно увидели преимущества своего вакуума, но если вы поймете это неправильно, придется потрудиться, чтобы все исправить, чтобы оно работало правильно. В дополнение к картографическим функциям также убедитесь, что вы можете запрограммировать время, когда вы хотите, чтобы ваш вакуум работал.</p>
+
+      <div class="ui-highlight">Перед покупкой выясните, как модель будет отображать ваш пол и как это будет работать, включая приложения, которые могут быть связаны с вашим вакуумом. Узнайте, как они работают, будут ли они работать с вашим телефоном и какими функциями вы можете пользоваться.</div>
+
+      <h6><span class="ui-number">#2</span>Питание от батареи и время работы робота-пылесоса</h6>
+
+      <p>Количество батареи, используемой для полной уборки дома, очень поднялось в обзорах. Самая распространенная жалоба заключалась в том, что пылесос не мог закончить весь дом от одной зарядки аккумулятора. Клиенты также отметили, что их вакуум сбрасывается после возвращения на док-станцию. Когда он возобновил уборку, он начал с самого начала, вместо того, чтобы начинать с того места, где остановился, оставляя часть дома не очищенной.</p>
+
+      <div class="ui-highlight">Выясните, как долго в среднем может работать робот-пылесос и будет ли этого достаточно для вашего дома. Кроме того, поймите, что делает вакуум, когда он возвращается на док-станцию. Будет ли он продолжать пылесосить там, где остановился, или перезапустится и вернется к началу?</div>
+    </div><!--.main-seo-->
+  </main>
+</div><!--.row-->
+
+<!--#include file="inc-footer.html"-->
