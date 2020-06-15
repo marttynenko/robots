@@ -16,7 +16,7 @@ header.header {
 		top: -60px;
 		left: 0;
 		right: 0;
-		z-index: 19;
+		z-index: 199;
 	}
 }
 .header-flex {
@@ -109,6 +109,7 @@ header.header {
 		z-index: 19;
 
 		&.fixed {
+			top: 0;
 			padding-top: 0;
 		}
 	}

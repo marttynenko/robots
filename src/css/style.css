@@ -638,7 +638,7 @@ header.header a { color: #FFF; }
 
 header.header a:hover { color: #FF6025; }
 
-header.header.fixed { position: fixed; top: -60px; left: 0; right: 0; z-index: 19; }
+header.header.fixed { position: fixed; top: -60px; left: 0; right: 0; z-index: 199; }
 
 .header-flex { min-height: 60px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
@@ -664,7 +664,7 @@ header.header.fixed { position: fixed; top: -60px; left: 0; right: 0; z-index: 1
 
 @media (min-width: 768px) { body, body.header-fixed { padding-top: 60px; }
   header.header { background: #323232; position: fixed; top: 0; left: 0; right: 0; z-index: 19; }
-  header.header.fixed { padding-top: 0; }
+  header.header.fixed { top: 0; padding-top: 0; }
   .header-flex { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
   .header-logo { -ms-flex: 0 0 auto; flex: 0 0 auto; padding: 0 50px 0 0; }
   .header-menu { -ms-flex: 1 0 auto; flex: 1 0 auto; font-size: 16px; font-size: 1rem; background: none; position: static; }
@@ -1170,6 +1170,36 @@ footer.footer { background: #323232; padding: 15px 0 0; color: #FFF; }
 
 .ui-toggled-toggler { display: none; visibility: hidden; }
 
+.compare-list { overflow-x: auto; max-width: 100%; margin-bottom: 40px; white-space: nowrap; }
+
+.compare-item { display: inline-block; vertical-align: top; position: relative; width: 364.33px; margin-right: 20px; margin-bottom: 20px; background: #FFF; padding: 15px; white-space: normal; }
+
+.compare-item-rate { position: absolute; right: 15px; top: 15px; height: 30px; line-height: 32px; }
+
+.compare-item-img { margin-bottom: 20px; height: 240px; }
+
+.compare-item-img img { display: block; margin: 0 auto; max-height: 240px; }
+
+.compare-item-title { font-size: 18px; font-size: 1.125rem; font-weight: 700; margin-bottom: 5px; }
+
+.compare-item-title a { color: #323232; }
+
+.compare-item-title a:hover { color: #FF6025; }
+
+.compare-item-price { font-size: 16px; font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: #323232; }
+
+.compare-item-purposes { margin-bottom: 20px; position: relative; }
+
+.compare-item-purposes-btn { margin-bottom: 0; padding: 0px 15px; }
+
+.compare-item-purposes-btn:after { content: ""; display: inline-block; vertical-align: middle; margin-left: 5px; width: 0; height: 0; border-style: solid; border-width: 4px 3px 0 3px; border-color: #FFF transparent transparent transparent; }
+
+.compare-item-purposes-drop { visibility: hidden; opacity: 0; transform: translate3d(0, 10px, 0); position: absolute; top: 100%; left: 0px; right: 0; background: #FFF; max-height: 300px; overflow-y: auto; border: 1px solid #eee; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.1); z-index: 99; transition: visibility .15s, opacity .15s, transform .25s; text-align: center; }
+
+.compare-item-purposes-drop.opened { visibility: visible; opacity: 1; transform: translate3d(0, 0px, 0); }
+
+.compare-item-characters { padding-bottom: 8px; margin-bottom: 15px; border-bottom: 1px solid #eee; }
+
 /* MFP
 ---------------------------*/
 .black-popup { background: #858585; }
@@ -1432,6 +1462,10 @@ RESPONSIVE STYLES ----------------------- */
   .card-tabs { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   .card-tabs a { font-size: 14px; margin-right: 20px; } }
 
+@media (max-width: 992px) { .compare-item { width: 280px; margin-right: 15px; margin-bottom: 15px; }
+  .compare-item-img { height: 180px; }
+  .compare-item-img img { max-height: 180px; } }
+
 @media (max-width: 1210px) and (min-width: 576px) { .card .rate, .card-snippet .rate, .card-item .rate { height: 24px; line-height: 24px; font-size: 11px; padding: 0px 8px 0px 25px; }
   .card .rate:before, .card-snippet .rate:before, .card-item .rate:before { left: 6px; }
   .card .rate-current, .card-snippet .rate-current, .card-item .rate-current { font-size: 18px; } }
@@ -1524,4 +1558,9 @@ RESPONSIVE STYLES ----------------------- */
   .main-slide { padding-top: 55px; padding-bottom: 25px; min-height: 170px; }
   .main-slide-txt { font-size: 10px; }
   .main-slide-title { font-size: 26px; }
-  .slick-dots { bottom: 10px; } }
+  .slick-dots { bottom: 10px; }
+  .compare-item { width: 265px; margin-right: 10px; margin-bottom: 10px; padding: 10px 10px 15px; }
+  .compare-item-stickers { right: 10px; top: 10px; }
+  .compare-item-img { height: 150px; }
+  .compare-item-img img { max-height: 150px; }
+  .compare-item-purposes-btn { font-size: 14px; font-size: 0.875rem; } }

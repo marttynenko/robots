@@ -148,7 +148,19 @@ RESPONSIVE STYLES ----------------------- */
 }//1210
 
 @media (max-width: 992px) {
-	
+	.compare-item {
+		width: 280px;
+		margin-right: 15px;
+		margin-bottom: 15px;
+
+		&-img {
+			height: 180px;
+
+			img {
+				max-height: 180px;
+			}
+		}
+	}
 }
 @media (max-width: 1210px) and (min-width: 576px) {
 	.card, .card-snippet, .card-item {
@@ -594,5 +606,28 @@ RESPONSIVE STYLES ----------------------- */
 	}
 	.slick-dots {
 		bottom: 10px;
+	}
+	.compare-item {
+		width: 265px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		padding: 10px 10px 15px;
+
+		&-stickers {
+			right: 10px;
+			top: 10px;
+		}
+		&-img {
+			height: 150px;
+
+			img {
+				max-height: 150px;
+			}
+		}
+		&-purposes {
+			&-btn {
+				@include fz(14);
+			}
+		}
 	}
 }

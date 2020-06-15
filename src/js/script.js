@@ -396,6 +396,22 @@ jQuery(document).ready(function($){
 		toggledText('.main-top-txt');
 	}
 
+	$(document).on('click','.compare-item-purposes-btn',function(e){
+		const $this = $(this);
+		const $drop = $this.next('.compare-item-purposes-drop');
+		if ($drop.length && $drop.find('.card-purposes-item').length) {
+			e.preventDefault();
+			$this.toggleClass('opened');
+			$drop.toggleClass('opened');
+		}
+	})
+	$(document).on('mouseup',function(e){
+		if ($('.compare-item-purposes').has(e.target).length === 0){
+			$('.compare-item-purposes-drop').removeClass('opened');
+			$('.compare-item-purposes-btn').removeClass('opened');
+		}
+	});
+
 });//ready close
 
 
