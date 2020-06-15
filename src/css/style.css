@@ -1174,6 +1174,8 @@ footer.footer { background: #323232; padding: 15px 0 0; color: #FFF; }
 
 .compare-item { display: inline-block; vertical-align: top; position: relative; width: 364.33px; margin-right: 20px; margin-bottom: 20px; background: #FFF; padding: 15px; white-space: normal; }
 
+.compare-item:last-child { margin-right: 0; }
+
 .compare-item-rate { position: absolute; right: 15px; top: 15px; height: 30px; line-height: 32px; }
 
 .compare-item-img { margin-bottom: 20px; height: 240px; }

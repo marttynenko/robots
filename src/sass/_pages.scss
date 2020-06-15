@@ -1490,6 +1490,10 @@
 	padding: 15px;
 	white-space: normal;
 
+	&:last-child {
+		margin-right: 0;
+	}
+
 	&-rate {
 		position: absolute;
 		right: 15px;
