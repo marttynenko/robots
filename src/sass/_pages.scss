@@ -249,7 +249,7 @@
 	position: relative;
 
 	&-cols {
-		margin-bottom: 70px;
+		margin-bottom: 45px;
 	}
 	&-img {
 		width: 100%;
@@ -367,6 +367,7 @@
 			@include fz(16);
 			color: #AAA;
 			margin-right: 30px;
+			padding-top: 20px;
 			padding-bottom: 20px;
 
 			&:after {
@@ -1186,6 +1187,70 @@
 			border-color: transparent transparent transparent $titles;
 		}
 	}
+	&-filters {
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: -11px;
+		}
+	}
+	&-tag {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-right: 2px;
+		margin-bottom: 5px;
+		@include fz(13);
+		color: $font;
+		height: 26px;
+		line-height: 24px;
+		border: 1px solid $secondary;
+		border-radius: 2px;
+		padding: 0px 8px;
+
+		&:hover {
+			color: #000;
+			background: rgba($secondary, .1);
+		}
+	}
+	&-hidden {
+		display: none;
+	}
+}
+.filters-filters + .filters-hidden {
+	margin-top: -8px;
+	margin-bottom: 20px;
+}
+.filters-group {
+	.label-styler {
+		margin-bottom: 11px;
+		.jq-checkbox,
+		.jq-radio {
+			top: 2px;
+		}
+	}
+	.jq-checkbox,
+	.jq-radio {
+		width: 18px;
+		height: 18px;
+	}
+	.jq-radio.checked .jq-radio__div {
+		width: 8px;
+		height: 8px;
+	}
+	.jq-checkbox.checked {
+		background: $primary;
+
+		.jq-checkbox__div {
+			width: 11px;
+			height: 6px;
+			border-bottom: 2px solid #FFF;
+			border-left: 2px solid #FFF;
+			margin-top: 3px;
+		}
+	}
 }
 .row-front {
 	margin-top: 25px;
@@ -1578,5 +1643,28 @@
 		padding-bottom: 8px;
 		margin-bottom: 15px;
 		border-bottom: 1px solid $border;
+	}
+}
+
+.card-top {
+	margin-bottom: 0;
+}
+.card-cols {
+	margin-bottom: 0;
+}
+@media (min-width: 768px) {
+	#wrapper.wrapper-sticky, .wrapper-sticky {
+		overflow: unset;
+	}
+	.card-wrapper {
+		position: relative;
+	}
+	.card-tabs {
+		margin: 0;
+		position: sticky;
+		top: 60px;
+		left: 0;
+		z-index: 99;
+		background: #FFF;
 	}
 }

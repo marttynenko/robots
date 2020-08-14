@@ -32,7 +32,7 @@ header.header {
 .logo {
 	height: 60px;
 	display: block;
-	padding: 13px 0;
+	padding: 17px 0;
 
 	img {
 		display: block;
@@ -116,11 +116,14 @@ header.header {
 	.header-flex {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 	.header-logo {
-		-ms-flex: 0 0 auto;
-		flex: 0 0 auto;
-		padding: 0 50px 0 0;
+		-ms-flex: 0 0 25%;
+		flex: 0 0 25%;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.header-menu {
 		-ms-flex: 1 0 auto;
@@ -128,6 +131,8 @@ header.header {
 		@include fz(16);
 		background: none;
 		position: static;
+		padding-left: 10px;
+		padding-right: 10px;
 
 		&:after {
 			content: none;

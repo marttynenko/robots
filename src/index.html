@@ -6,35 +6,63 @@
       <div class="filters-group">
         <div class="filters-title">Каталог</div>
         <ul class="filters-menu">
-          <li><a href="#" class="active">Все категори</a></li>
+          <li><a href="#" class="active">Все категории</a></li>
           <li><a href="#">Обычные пылесосы</a></li>
           <li><a href="#">Роботы-пылесосы</a></li>
-          <li><a href="#">Роботы-плоттеры</a></li>
           <li><a href="#">Мойщики окон</a></li>
+          <li><a href="#">Роботы-плоттеры</a></li>
           <li><a href="#">Роботы для бассейнов</a></li>
         </ul>
       </div>
 
       <div class="filters-group">
         <div class="filters-title">Бренд</div>
-        <ul class="filters-menu">
-          <li><a href="#">Xiaomi</a></li>
-          <li><a href="#">Samsung</a></li>
-          <li><a href="#">iPlus</a></li>
-          <li><a href="#">Cleverpanda</a></li>
-        </ul>
-        <span class="filters-loader" data-href="ajax/all-brands.html" data-loaded="false">Все 64 варианта</span>
+        <div class="filters-filters">
+          <label for="fm_1" class="label-styler">
+            <input type="checkbox" name="fm_1" >
+            <span>Xiaomi</span>
+          </label>
+          <label for="fm_2" class="label-styler">
+            <input type="checkbox" name="fm_2" >
+            <span>Samsung</span>
+          </label>
+          <label for="fm_3" class="label-styler">
+            <input type="checkbox" name="fm_3" >
+            <span>iPlus</span>
+          </label>
+          <label for="fm_4" class="label-styler">
+            <input type="checkbox" name="fm_4" >
+            <span>Clever</span>
+          </label>
+        </div>
+        <div class="filters-hidden">
+          <label for="fm_5" class="label-styler">
+            <input type="checkbox" name="fm_5" >
+            <span>Creed</span>
+          </label>
+          <label for="fm_6" class="label-styler">
+            <input type="checkbox" name="fm_6" >
+            <span>Rowenta</span>
+          </label>
+          <label for="fm_7" class="label-styler">
+            <input type="checkbox" name="fm_7" >
+            <span>Deawoo</span>
+          </label>
+        </div>
+        <span class="filters-loader filters-toggler" data-open="Еще 5 вариантов" data-close="Свернуть список" data-isopen="false">Еще 3 варианта</span>
       </div><!--.group-->
 
       <div class="filters-group">
-        <div class="filters-title">Фильтр</div>
-        <ul class="filters-menu">
-          <li><a href="#" class="active">с влажной уборкой</a></li>
-          <li><a href="#">для ковров</a></li>
-          <li><a href="#">для уборки шерсти</a></li>
-          <li><a href="#">с приложением</a></li>
-        </ul>
-        <span class="filters-loader" data-href="ajax/all-filters.html" data-loaded="false">Все 20 варианта</span>
+        <div class="filters-title">Рейтинг</div>
+
+        <div class="ui-range-inputs flex">
+          <input type="text" name="range_rating_min" id="range_rating_min" value="" placeholder="От">
+          <input type="text" name="range_rating_max" id="range_rating_max" value="" placeholder="До">
+        </div>
+        <div class="ui-range-wrap">
+          <input type="text" class="ui-range" id="range-ratings" data-min="0" data-max="10" data-step="0.5">
+        </div>
+        
       </div><!--.group-->
 
       <div class="filters-group">
@@ -51,17 +79,137 @@
       </div><!--.group-->
 
       <div class="filters-group">
-        <div class="filters-title">Емкость аккумулятора, мАч</div>
+        <div class="filters-title">Влажная уборка</div>
+        <div class="filters-filters">
+          <label for="fclean_1" class="label-styler">
+            <input type="radio" name="fclean" id="fclean_1">
+            <span>есть</span>
+          </label>
+          <label for="fclean_2" class="label-styler">
+            <input type="radio" name="fclean" id="fclean_2">
+            <span>Нет</span>
+          </label>
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Тип навигации</div>
+        <div class="filters-filters">
+          <label for="fn_1" class="label-styler">
+            <input type="checkbox" name="fn_1" >
+            <span>рандом</span>
+          </label>
+          <label for="fn_2" class="label-styler">
+            <input type="checkbox" name="fn_2" >
+            <span>гироскоп</span>
+          </label>
+          <label for="fn_3" class="label-styler">
+            <input type="checkbox" name="fn_3" >
+            <span>камера</span>
+          </label>
+          <label for="fn_4" class="label-styler">
+            <input type="checkbox" name="fn_4" >
+            <span>лидар</span>
+          </label>
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Построение карты</div>
+        <div class="filters-filters">
+          <label for="fmap_1" class="label-styler">
+            <input type="radio" name="fmap" id="fmap_1">
+            <span>есть</span>
+          </label>
+          <label for="fmap_2" class="label-styler">
+            <input type="radio" name="fmap" id="fmap_2">
+            <span>Нет</span>
+          </label>
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Управление со смартфона</div>
+        <div class="filters-filters">
+          <label for="fphone_1" class="label-styler">
+            <input type="radio" name="fphone" id="fphone_1">
+            <span>есть</span>
+          </label>
+          <label for="fphone_2" class="label-styler">
+            <input type="radio" name="fphone" id="fphone_2">
+            <span>Нет</span>
+          </label>
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Площадь уборки, м2</div>
 
         <div class="ui-range-inputs flex">
-          <input type="text" name="range_v_min" id="range_v_min" value="" placeholder="От">
-          <input type="text" name="range_v_max" id="range_v_max" value="" placeholder="До">
+          <input type="text" name="range_area_min" id="range_area_min" value="" placeholder="От">
+          <input type="text" name="range_area_max" id="range_area_max" value="" placeholder="До">
         </div>
         <div class="ui-range-wrap">
-          <input type="text" class="ui-range" id="range-v" data-min="0" data-max="6000">
+          <input type="text" class="ui-range" id="range-area" data-min="3" data-max="30">
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Емкость пылесборника, л</div>
+
+        <div class="ui-range-inputs flex">
+          <input type="text" name="range_l_min" id="range_l_min" value="" placeholder="От">
+          <input type="text" name="range_l_max" id="range_l_max" value="" placeholder="До">
+        </div>
+        <div class="ui-range-wrap">
+          <input type="text" class="ui-range" id="range-l" data-min="0" data-max="3" data-step="0.1">
         </div>
         
       </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Уборка по расписанию</div>
+        <div class="filters-filters">
+          <label for="fschedule_1" class="label-styler">
+            <input type="checkbox" name="fschedule_1" >
+            <span>по времени</span>
+          </label>
+          <label for="fschedule_2" class="label-styler">
+            <input type="checkbox" name="fschedule_2" >
+            <span>по дням недели</span>
+          </label>
+          <label for="fschedule_3" class="label-styler">
+            <input type="checkbox" name="fschedule_3" >
+            <span>нет</span>
+          </label>
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Турбощетка</div>
+        <div class="filters-filters">
+          <label for="fschetka_1" class="label-styler">
+            <input type="radio" name="fschetka" id="fschetka_1">
+            <span>есть</span>
+          </label>
+          <label for="fschetka_2" class="label-styler">
+            <input type="radio" name="fschetka" id="fschetka_2">
+            <span>нет</span>
+          </label>
+        </div>
+      </div><!--.group-->
+
+      <div class="filters-group">
+        <div class="filters-title">Готовые подборки</div>
+        <div class="filters-filters">
+          <a href="#" class="filters-tag">с влажной уборкой</a>
+          <a href="#" class="filters-tag">мощные</a>
+          <a href="#" class="filters-tag">доступные</a>
+          <a href="#" class="filters-tag">уборка по расписанию</a>
+        </div>
+      </div>
+
+      
     </div><!--.filters-->
   </aside>
 

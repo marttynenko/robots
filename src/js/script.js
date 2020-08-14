@@ -118,53 +118,51 @@ function lazyLibraryLoad(scriptSrc,linkHref,callback) {
   script.onload = callback
 }
 
+//создаем ползунки
+function createRangeSlider(sliderID,minID,maxID) {
+	$(sliderID).ionRangeSlider({
+		type: "double",
+		from: parseInt($(minID ).val(),10) || 0,
+		to: parseInt($(maxID).val(),10) || 100,
+		grid: false,
+		onChange: function(data) {
+			$(minID).val(data.from);
+			$(maxID).val(data.to);
+		}
+	})
+
+	if (minID !== undefined && maxID !== undefined) {
+		let rangeData = $(sliderID).data('ionRangeSlider');
+
+		$(document).on('change',minID,function(){
+			$val = parseInt(this.value,10);
+			if ($val !== NaN) {
+				rangeData.update({from: $val})
+			}
+		});
+		$(document).on('change',maxID,function(){
+			$val = parseInt(this.value,10);
+			if ($val !== NaN) {
+				rangeData.update({to: $val})
+			}
+		});
+	}
+}
+
+
 function ionSliderInit() {
-	$('#range-prices').ionRangeSlider({
-		type: "double",
-		from: parseInt($('#range_price_min').val(),10) || 50,
-		to: parseInt($('#range_price_max').val(),10) || 2000,
-		grid: false,
-		onChange: function(data) {
-			$('#range_price_min').val(data.from);
-			$('#range_price_max').val(data.to);
-		}
-	})
-	$('#range-v').ionRangeSlider({
-		type: "double",
-		from: parseInt($('#range_v_min').val(),10) || 500,
-		to: parseInt($('#range_v_max').val(),10) || 6000,
-		grid: false,
-		onChange: function(data) {
-			$('#range_v_min').val(data.from);
-			$('#range_v_max').val(data.to);
-		}
-	})
-	let rangePrices = $('#range-prices').data('ionRangeSlider');
-	let rangeV = $('#range-v').data('ionRangeSlider');
-	$(document).on('change','#range_price_min',function(){
-		$val = parseInt(this.value,10);
-		if ($val !== NaN) {
-			rangePrices.update({from: $val})
-		}
-	});
-	$(document).on('change','#range_price_max',function(){
-		$val = parseInt(this.value,10);
-		if ($val !== NaN) {
-			rangePrices.update({to: $val})
-		}
-	});
-	$(document).on('change','#range_v_min',function(){
-		$val = parseInt(this.value,10);
-		if ($val !== NaN) {
-			rangeV.update({from: $val})
-		}
-	});
-	$(document).on('change','#range_v_max',function(){
-		$val = parseInt(this.value,10);
-		if ($val !== NaN) {
-			rangeV.update({to: $val})
-		}
-	});
+
+	//ползунок для цены
+	createRangeSlider('#range-prices','#range_price_min','#range_price_max');
+
+	//ползунок рейтинга
+	createRangeSlider('#range-ratings','#range_rating_min','#range_rating_max');
+
+	//ползунок площадь уборки
+	createRangeSlider('#range-area','#range_area_min','#range_area_max');
+
+	//ползунок емкость пылесборника
+	createRangeSlider('#range-l','#range_l_min','#range_l_max');
 }
 
 
@@ -223,10 +221,12 @@ jQuery(document).ready(function($){
 	$(document).on('click','.scroll-link',function(e){
 		e.preventDefault();
 		const hash = $(this).attr('href');
+		const that = $(this);
+		let tabs = $(this).closest('.card-tabs');
 		if ($(hash).length) {
 			let offset = $(hash).offset().top;
 			$('html,body').animate({
-				scrollTop:offset-80
+				scrollTop:offset-100
 			},300);
 		}
 	})
@@ -412,10 +412,42 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$(document).on('click','.filters-toggler',function(e){
+		e.preventDefault();
+		let isopen = $(this).attr('data-isopen');
+		let filters = $(this).prev('.filters-hidden');
+		if (isopen == 'false') {
+			filters.slideDown(100);
+			$(this).attr('data-isopen','true');
+			$(this).text($(this).attr('data-close'));
+		} else {
+			filters.slideUp(100);
+			$(this).attr('data-isopen','false');
+			$(this).text($(this).attr('data-open'));
+		}
+	});
+
+	if ($('.card-wrapper').length) {
+		$('.wrapper').addClass('wrapper-sticky');
+	}
+
+	if (document.documentElement.clientWidth > 768 && $('.card-scroll-tracking').length) {
+		$(window).scroll(function(){
+			var $sections = $('.card-scroll-tracking');
+			$sections.each(function(key,item){
+				var top  = $(item).offset().top - 120;
+				// var bottom = top +$(item).height();
+				var scroll = $(window).scrollTop();
+				var id = $(item).attr('id');
+					if( scroll > top){
+						$('.card-tabs a.active').removeClass('active');
+						$('.card-tabs a[href="#'+id+'"]').addClass('active');
+					}
+				})
+		});
+	}
+
 });//ready close
-
-
-
 
 
 $(window).on('load',function(){
