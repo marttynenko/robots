@@ -136,7 +136,7 @@ RESPONSIVE STYLES ----------------------- */
 		&-tabs {
 			margin-left: 0;
 			margin-right: 0;
-			padding-left: 0;
+			padding-left: 20px;
 			padding-right: 0;
 			
 			a {
@@ -320,36 +320,44 @@ RESPONSIVE STYLES ----------------------- */
 		}
 	}
 	.card-tabs {
-		white-space: normal;
+		padding-left: 15px;
+		top: 40px;
 
-		a {
-			display: block;
-			border-top: 1px solid $border;
-			color: $titles;
-			font-size: 16px;
-			margin-right: 0;
-			padding: 14px 15px 14px 15px;
-
-			&.active {
-				color: $titles;
-				font-weight: 400;
-			}
-			&:after {
-				content: none;
-			}
-			&:before {
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 50%;
-				margin-top: -6px;
-				width: 6px;
-				height: 12px;
-				background: url(../images/svg/arrow-right.svg) center no-repeat;
-				background-size: contain;
-			}
+		a.active {
+			font-weight: 400;
 		}
 	}
+	// .cardss-tabs {
+	// 	white-space: normal;
+
+	// 	a {
+	// 		display: block;
+	// 		border-top: 1px solid $border;
+	// 		color: $titles;
+	// 		font-size: 16px;
+	// 		margin-right: 0;
+	// 		padding: 14px 15px 14px 15px;
+
+	// 		&.active {
+	// 			color: $titles;
+	// 			font-weight: 400;
+	// 		}
+	// 		&:after {
+	// 			content: none;
+	// 		}
+	// 		&:before {
+	// 			content: "";
+	// 			position: absolute;
+	// 			left: 0;
+	// 			top: 50%;
+	// 			margin-top: -6px;
+	// 			width: 6px;
+	// 			height: 12px;
+	// 			background: url(../images/svg/arrow-right.svg) center no-repeat;
+	// 			background-size: contain;
+	// 		}
+	// 	}
+	// }
 	.card-purposes {
 		&-item {
 			&.mobile-only {
@@ -578,7 +586,10 @@ RESPONSIVE STYLES ----------------------- */
 				background: linear-gradient(270deg, $bgc 40%, rgba($bgc,0) 100%);
 			}
 		}
-		
+	}
+	.card-info {
+		padding-right: 0;
+		margin-bottom: 20px;
 	}
 }//576
 

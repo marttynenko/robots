@@ -1653,21 +1653,104 @@
 	margin-bottom: 0;
 }
 @media (min-width: 768px) {
-	#wrapper.wrapper-sticky, .wrapper-sticky {
-		overflow: unset;
-	}
-	.card-wrapper {
-		position: relative;
-	}
-	.card-tabs {
-		margin: 0;
-		position: sticky;
-		top: 60px;
-		left: 0;
-		z-index: 99;
-		background: #FFF;
-	}
+	
 }
 .card-tags {
 	padding-top: 25px;
+}
+#wrapper.wrapper-sticky, .wrapper-sticky {
+	overflow: unset;
+}
+.card-wrapper {
+	position: relative;
+}
+.card-tabs {
+	margin: 0;
+	position: sticky;
+	top: 60px;
+	left: 0;
+	z-index: 99;
+	background: #FFF;
+	overflow-x: auto;
+}
+
+
+.m-filters-toggler {
+	display: none;
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+	top: 1px;
+	height: 30px;
+	line-height: 28px;
+	border: 1px solid $primary;
+	padding: 0px 15px;
+	color: $primary;
+	cursor: pointer;
+}
+.m-filters-close {
+	display: none;
+	visibility: hidden;
+	position: fixed;
+	left: 265px;
+	top: 20px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	font-size: 0;
+	text-indent: -9999px;
+	color: $primary;
+	background: #FFF url(../images/close.svg) center no-repeat;
+	background-size: 16px;
+	z-index: 309;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+@media (max-width:992px) {
+	.catalog-sorting {
+		position: relative;
+		padding-right: 100px;
+	}
+	.m-filters-toggler {
+		display: inline-block;
+		visibility: visible;
+	}
+	div.col-catalog-filters,
+	aside.col-catalog-filters {
+		position: fixed;
+		width: 280px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		transform: translate3d(-292px,0,0);
+		transition: transform .4s;
+		z-index: 299;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 40px;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		box-shadow: 0px 0 10px 0px rgba(0, 0, 0, 0.42);
+		background: #FFF;
+
+		&.opened {
+			transform: translate3d(0px,0,0);
+		}
+		.filters {
+			margin-bottom: 0;
+		}
+	}
+	.m-filters-close {
+		&.opened {
+			display: block;
+			visibility: visible;
+		}
+	}
+}
+
+@media (max-width:480px) {
+	.catalog-sorting-label {
+		display: none;
+	}
 }

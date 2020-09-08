@@ -431,7 +431,7 @@ jQuery(document).ready(function($){
 		$('.wrapper').addClass('wrapper-sticky');
 	}
 
-	if (document.documentElement.clientWidth > 768 && $('.card-scroll-tracking').length) {
+	if ($('.card-scroll-tracking').length) {
 		$(window).scroll(function(){
 			var $sections = $('.card-scroll-tracking');
 			$sections.each(function(key,item){
@@ -446,6 +446,25 @@ jQuery(document).ready(function($){
 				})
 		});
 	}
+
+	if ($('.col-catalog-filters').length) {
+		$('.catalog-sorting').append('<span class="m-filters-toggler" onclick="">Фильтры</span>');
+		$('.col-catalog-filters').after('<div class="m-filters-close" onclick="">Закрыть фильтры</div>')
+	}
+
+	$(document).on('click','.m-filters-toggler',function(e){
+		e.preventDefault();
+		$(this).addClass('opened');
+		$('.col-catalog-filters').addClass('opened');
+		$('.m-filters-close').addClass('opened');
+	})
+
+	$(document).on('click','.m-filters-close',function(e){
+		e.preventDefault();
+		$(this).removeClass('opened');
+		$('.col-catalog-filters').removeClass('opened');
+		$('.m-filters-toggler').removeClass('opened');
+	})
 
 });//ready close
 
