@@ -1680,7 +1680,8 @@
 	visibility: hidden;
 	position: absolute;
 	right: 0;
-	top: 1px;
+	top: 50%;
+	margin-top: -15px;
 	height: 30px;
 	line-height: 28px;
 	border: 1px solid $primary;
@@ -1749,6 +1750,11 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.m-filters-toggler {
+		margin-top: -16px;
+	}
+}
 @media (max-width:480px) {
 	.catalog-sorting-label {
 		display: none;
