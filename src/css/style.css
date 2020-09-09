@@ -658,11 +658,11 @@ header.header.fixed { position: fixed; top: -60px; left: 0; right: 0; z-index: 1
 
 .main-menu a { display: block; height: 40px; line-height: 40px; }
 
-.compare-link { display: inline-block; height: 40px; line-height: 40px; }
+.compare-link { display: inline-block; height: 40px; line-height: 40px; font-size: 14px; font-size: 0.875rem; }
 
 @media (min-width: 345px) { .compare-link-icon { display: inline-block; vertical-align: middle; margin-left: 4px; width: 18px; height: 18px; background: url(../images/svg/compare-icon.svg) center no-repeat; background-size: contain; position: relative; top: -1px; } }
 
-@media (min-width: 768px) { body, body.header-fixed { padding-top: 60px; }
+@media (min-width: 769px) { body, body.header-fixed { padding-top: 60px; }
   header.header { background: #323232; position: fixed; top: 0; left: 0; right: 0; z-index: 19; }
   header.header.fixed { top: 0; padding-top: 0; }
   .header-flex { -ms-flex-wrap: nowrap; flex-wrap: nowrap; margin-left: -10px; margin-right: -10px; }
@@ -696,7 +696,7 @@ footer.footer { background: #323232; padding: 15px 0 0; color: #FFF; }
 
 .footer-socials a:hover svg { fill: #FF6025; }
 
-@media (min-width: 768px) { footer.footer { padding: 54px 0; }
+@media (min-width: 769px) { footer.footer { padding: 54px 0; }
   .footer-flex { flex-wrap: nowrap; }
   .footer-menu { order: 0; flex: 0 0 auto; margin-top: 0; position: static; }
   .footer-menu:after { content: none; }
@@ -1236,7 +1236,9 @@ footer.footer { background: #323232; padding: 15px 0 0; color: #FFF; }
 
 .card-wrapper { position: relative; }
 
-.card-tabs { margin: 0; position: sticky; top: 60px; left: 0; z-index: 99; background: #FFF; overflow-x: auto; }
+.card-tabs-wrap { position: sticky; top: 60px; left: 0; z-index: 99; }
+
+.card-tabs { margin: 0; background: #FFF; overflow-x: auto; }
 
 .m-filters-toggler { display: none; visibility: hidden; position: absolute; right: 0; top: 50%; margin-top: -15px; height: 30px; line-height: 28px; border: 1px solid #FF6025; padding: 0px 15px; color: #FF6025; cursor: pointer; }
 
@@ -1249,9 +1251,15 @@ footer.footer { background: #323232; padding: 15px 0 0; color: #FFF; }
   div.col-catalog-filters .filters, aside.col-catalog-filters .filters { margin-bottom: 0; }
   .m-filters-close.opened { display: block; visibility: visible; } }
 
+@media (max-width: 768px) { .card-tabs { padding-right: 45px !important; }
+  .card-tabs-wrap:before { content: ""; position: absolute; right: 0; top: 0; bottom: 1px; width: 45px; background: linear-gradient(90deg, rgba(255, 255, 255, 0), #FFF); z-index: 1; }
+  .card-tabs-wrap:after { content: ""; position: absolute; right: 10px; top: 50%; margin-top: -7px; width: 14px; height: 14px; background: url(../images/svg/arrow-right.svg) center no-repeat; background-size: contain; z-index: 2; animation: pulse 3s infinite; } }
+
 @media (max-width: 576px) { .m-filters-toggler { margin-top: -16px; } }
 
 @media (max-width: 480px) { .catalog-sorting-label { display: none; } }
+
+@keyframes pulse { 50% { opacity: 0; } }
 
 /* MFP
 ---------------------------*/
@@ -1493,7 +1501,7 @@ RESPONSIVE STYLES ----------------------- */
   .ui-highlight.attention { background: #FFFEF1; }
   .ui-highlight.attention:before { top: 40px; width: 51px; height: 51px; } }
 
-@media (min-width: 768px) { .white-content { padding: 20px; }
+@media (min-width: 769px) { .white-content { padding: 20px; }
   .article-header { position: relative; z-index: 1; min-height: 250px; overflow: hidden; padding: 70px 45% 70px 60px; margin: -20px -20px 40px -20px; }
   .article-header h1 { font-size: 30px; font-size: 1.875rem; } }
 
@@ -1552,7 +1560,8 @@ RESPONSIVE STYLES ----------------------- */
   .card .card-store { margin-bottom: 0; }
   .card .card-store .label-styler { position: absolute; right: 20px; top: 282px; }
   .card .card-cols { margin-bottom: 30px; padding-bottom: 0; }
-  .card-tabs { padding-left: 15px; top: 40px; }
+  .card-tabs-wrap { top: 40px; }
+  .card-tabs { padding-left: 15px; }
   .card-tabs a.active { font-weight: 400; }
   .card-purposes-item.mobile-only { display: block; } }
 

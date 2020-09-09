@@ -81,6 +81,7 @@ header.header {
 	display: inline-block;
 	height: 40px;
 	line-height: 40px;
+	@include fz(14);
 }
 
 
@@ -97,7 +98,7 @@ header.header {
 		top: -1px;
 	}
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 	body, body.header-fixed {
 		padding-top: 60px;
 	}

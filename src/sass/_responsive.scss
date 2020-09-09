@@ -47,7 +47,7 @@ RESPONSIVE STYLES ----------------------- */
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 	.white-content {
 		padding: 20px;
 	}
@@ -319,10 +319,12 @@ RESPONSIVE STYLES ----------------------- */
 			padding-bottom: 0;
 		}
 	}
+	.card-tabs-wrap {
+		top: 40px;
+	}
 	.card-tabs {
 		padding-left: 15px;
-		top: 40px;
-
+		
 		a.active {
 			font-weight: 400;
 		}
